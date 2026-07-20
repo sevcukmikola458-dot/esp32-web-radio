@@ -21,8 +21,8 @@ jobs:
       - name: Show build folder
         run: ls -R .pio/build
 
-      - name: Upload all BIN files
+      - name: Upload firmware artifact
         uses: actions/upload-artifact@v4
         with:
           name: firmware
-          path: .pio/build/**/*.bin
+          path: .pio/build/esp32doit-devkit-v1/*.bin
